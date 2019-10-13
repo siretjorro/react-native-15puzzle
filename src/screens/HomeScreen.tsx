@@ -63,7 +63,7 @@ export class HomeScreen extends React.Component<Props, State> {
             <SafeAreaView style={this.style().safeArea}>
                 <View style={this.style().root}>
                     <Text style={this.style().appName}>{AppName.puzzle15}</Text>
-                    <Button title={MagicStrings.play} onPress={() => {
+                    <TouchableOpacity style={this.style().button} onPress={() => {
                         try {
         console.log("tere")
                             navigate('Game')
@@ -71,7 +71,7 @@ export class HomeScreen extends React.Component<Props, State> {
                             console.log(e)
                     }}}>
                         <Text style={this.style().buttonText}>{MagicStrings.play}</Text>
-                    </Button>
+                    </TouchableOpacity>
                 </View>
             </SafeAreaView>
         );
