@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, Button, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
 import { NavigationScreenProp, NavigationState, NavigationParams } from 'react-navigation';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import { TextInput } from 'react-native-gesture-handler';
 import { RouteName, MagicStrings, AppName } from '../enums/Constants';
 
 export interface Props {
