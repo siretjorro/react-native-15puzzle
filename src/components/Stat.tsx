@@ -9,7 +9,6 @@ export interface Props {
 export class Stat extends React.Component<Props> {
     static contextType = AppContext;
 
-    // define for TS what is type of context
     context!: React.ContextType<typeof AppContext>
     
     constructor(props: Props) {

@@ -9,7 +9,6 @@ export interface Props {
 export class Cell extends React.Component<Props> {
     static contextType = AppContext;
 
-    // define for TS what is type of context
     context!: React.ContextType<typeof AppContext>
     
     constructor(props: Props) {
@@ -21,7 +20,6 @@ export class Cell extends React.Component<Props> {
             cell: {
                 backgroundColor: this.props.buttonText === '' ? "#ffe5e8" : "#595959",
                 flex: 1,
-                //backgroundColor: "#595959",
                 borderColor: "#ffe5e8",
                 borderWidth: 2,
                 borderRadius: 10,
@@ -34,8 +32,6 @@ export class Cell extends React.Component<Props> {
             }
         });
     }
-
-    buttonPressed = () => console.log("hey");
 
     render() {
         return (

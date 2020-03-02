@@ -3,7 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import { Row } from './Row';
 
 export interface State {
-    // gameState: GameState
 }
 
 export interface Props {
@@ -30,24 +29,6 @@ export class Board extends React.Component<Props, State> {
         });
     }
 
-    // pressIncrement = () => {
-    //     this.setState({
-    //         gameState: {
-    //             moves: this.state.gameState.moves + 1
-    //         }
-    //     });
-    // }
-
-    // pressDecrement = () => {
-    //     this.setState({
-    //         gameState: {
-    //             moves: this.state.gameState.moves - 1
-    //         }
-    //     });
-    // }
-
-    buttonPressed = () => console.log("hey");
-
     render() {
         return (
             <View style={this.style().gameboardContainer}>
@@ -61,10 +42,3 @@ export class Board extends React.Component<Props, State> {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    main: {
-        flex: 1,
-        flexGrow: 1
-    }
-});

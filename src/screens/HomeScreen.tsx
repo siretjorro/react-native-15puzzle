@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
 import { NavigationScreenProp, NavigationState, NavigationParams } from 'react-navigation';
-import { TextInput } from 'react-native-gesture-handler';
 import { RouteName, MagicStrings, AppName } from '../enums/Constants';
 
 export interface Props {
@@ -65,7 +64,6 @@ export class HomeScreen extends React.Component<Props, State> {
                     <Text style={this.style().appName}>{AppName.puzzle15}</Text>
                     <TouchableOpacity style={this.style().button} onPress={() => {
                         try {
-        console.log("tere")
                             navigate('Game')
                         } catch(e) {
                             console.log(e)

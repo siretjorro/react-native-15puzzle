@@ -15,7 +15,6 @@ export interface Props {
 export class Statistics extends React.Component<Props, State> {
     static contextType = AppContext;
 
-    // define for TS what is type of context
     context!: React.ContextType<typeof AppContext>
     
     constructor(props) {
@@ -49,8 +48,6 @@ export class Statistics extends React.Component<Props, State> {
             }
         });
     }
-
-    buttonPressed = () => console.log("hey");
 
     render() {
         return (

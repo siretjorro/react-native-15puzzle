@@ -4,10 +4,7 @@ import { NavigationScreenProp, NavigationState, NavigationParams } from 'react-n
 import { Statistics } from '../components/Statistics';
 import { Board } from '../components/Board';
 import { AppContextProvider, IAppContext } from '../contexts/AppContext';
-import { ScreenOrientationName, AppName, RouteName } from '../enums/Constants';
-
-export interface NavigationParams {
-}
+import { ScreenOrientationName, AppName, RouteName, MagicStrings } from '../enums/Constants';
 
 export interface IProps {
     navigation: NavigationScreenProp<NavigationState, NavigationParams>;
@@ -85,8 +82,8 @@ export class GameScreen extends React.Component<IProps, IState> {
     }
 
     makeMove = (cell: string) => {
-        // make a move
         if (cell != '') {
+            console.log(this);
             const clicked: number[] = this.getClickedCoordinates(cell);
             const clickedRow: number = clicked[0];
             const clickedCol: number = clicked[1];
@@ -98,7 +95,7 @@ export class GameScreen extends React.Component<IProps, IState> {
             }
 
             if (this.isWon()) {
-                alert("You won!");
+                alert(MagicStrings.win);
                 this.newGame();
             }
         }
@@ -179,7 +176,7 @@ export class GameScreen extends React.Component<IProps, IState> {
         return true;
     }
 
-    getClickedCoordinates = (cell: string) => {
+    getClickedCoordinates = function (cell: string) {
         let coordinates: number[] = [];
 
         for (var i = 0; i < 4; i++) {

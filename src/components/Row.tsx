@@ -27,8 +27,6 @@ export class Row extends React.Component<Props> {
         });
     }
 
-    buttonPressed = () => console.log("hey");
-
     render() {
         return (
             <View style={this.style().row}>

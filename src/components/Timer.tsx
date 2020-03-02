@@ -16,7 +16,6 @@ export interface State {
 export class Timer extends React.Component<Props, State> {
     static contextType = AppContext;
 
-    // define for TS what is type of context
     context!: React.ContextType<typeof AppContext>
     
     constructor(props: Props) {
